@@ -1,0 +1,23 @@
+soyons_foot_homepage:
+    path:     /
+    defaults: { _controller: SoyonsFootBundle:Default:index }
+
+soyons_foot_debutantguide:
+    path:     /debutantguide
+    defaults: { _controller: SoyonsFootBundle:Default:debutantguide }
+
+soyons_foot_techniques:
+    path:     /techniques
+    defaults: { _controller: SoyonsFootBundle:Default:techniques }
+
+soyons_foot_connexion:
+    path:     /connexion
+    defaults: { _controller: SoyonsFootBundle:Default:connexion }
+
+soyons_foot_login:
+    path:     /login
+    defaults: { _controller: SoyonsFootBundle:Default:login }
+
+soyons_foot_jeu:
+    path:     /jeu
+    defaults: { _controller: SoyonsFootBundle:Default:jeu }

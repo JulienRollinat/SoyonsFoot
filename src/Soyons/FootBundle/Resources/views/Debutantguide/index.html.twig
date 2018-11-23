@@ -1,0 +1,51 @@
+{% extends "SoyonsFootBundle::layout.html.twig" %}
+
+{% block body %}
+  <body>
+    <header id="titre">
+      <h1>Soyons <strong>Foot!</strong></h1>
+    </header>
+    <nav class="navprincipale">
+      <a href="{{ path('soyons_foot_homepage') }}"> Acceuil</a>
+      <a href="{{ path('soyons_foot_connexion') }}"> Notre Jeu en ligne</a>
+      <a href="{{ path('soyons_foot_techniques') }}"> Les différentes techniques</a>
+    </nav>
+
+    <section>
+
+    <h1> Avis aux débutants ! Voici les erreurs à éviter ! </h1>
+
+    <p> <img src="{{asset('bundles/images/debutant.jpg')}}"alt="debutant" class="debutant"> </p>
+
+    <h3> Erreur n°1 : ne s’inscrire que sur un seul site de paris sportifs </h3>
+
+    <p> Les cotes des sites de paris sportifs ne sont pas les mêmes pour un match, et autant capitaliser dessus. Bien sûr, vous pourriez vous contenter de vous inscrire chez un seul des sites les plus connus, mais en vous inscrivant chez les 3 plus gros sites de paris sportifs plutôt que chez le seul BetStars par exemple, vous allez pouvoir identifier ceux qui peuvent potentiellement vous rapporter un peu plus, sans aucun effort supplémentaire. Des sites généralistes sur les paris sportifs vous donnent des comparateurs de cotes, très utiles. </p>
+
+    <h3> Erreur n°2 : parier sur son club de coeur </h3>
+
+    <p> C’est THE erreur du débutant en paris sportifs. Là où le parieur lambda sera très cartésien, le parieur qui mettra des billes sur son club sera forcément influencé par ses émotions et son désir de voir son club faire un bon résultat. Le parieur pense aussi tout savoir sur ses joueurs, déformant la réalité. Oubliez tout de suite votre club pour un pari gagnant, on est là pour gagner de l’argent avant tout.</p>
+
+    <h3> Erreur n°3 : parier sur son club de coeur </h3>
+
+    <p> L’autorité de régulation des jeux en ligne (ARJEL) s’occupe de contrôler les sites de paris en France. Les places sont rares et chères, et les parieurs n’ont donc pas énormément de choix concernant le lieu pour placer ses billes en toute sécurité, la charte de l’ARJEL étant très exigeante. Les cotes sont souvent proches, et les championnats communs : Europe, Brésil, Argentine, etc. Si vous désirez des plus grosses cotes et des championnats exotiques plus rentables, des sites de paris sportifs hors ARJEL sont disponibles. Gardez en tête qu’il ne sont pas surveillés par l’ARJEL, et donc pas forcément fiables ou sécurisés.</p>
+
+    <h3> Erreur n°4 : multiplier les cotes faibles </h3>
+
+    <p> Alors comme ça on veut jouer la sécurité ? Ce n’est pas parce qu’on joue 10 matchs avec une cote à 1.05 qu’on sera à tous les coups gagnant, loin de là ! Le football est tout sauf prévisible, et les surprises sont nombreuses. Prendre le risque de voir un exploit du petit poucet vaut-il le coup de gagner quelques miettes ? Privilégiez la qualité à la quantité. Mieux vaut 2 ou 3 paris avec une cote entre 1.7 et 2.5 plutôt que 10 paris à 1.05 ;) </p>
+
+    <h3> Erreur n°5 : ne faire qu’un seul pari dans un match </h3>
+
+    <p>Et si un mauvais pari pouvait en devenir un bon ? Les gros parieurs savent rebondir sur leurs échecs. Exemple : vous placez un gros montant sur un score coté à 2, mais le scenario ne se réalise pas. Pas grave, placez une somme très faible (1€) sur un scenario WTF durant le match, coté à 6 ou plus. Au pire, il ne se produit pas et vous ne perdez pas grand chose. Au mieux, il se réalise et vous remboursez votre gros pari que vous pensiez plus « sûr ».</p>
+
+    <h3> Erreur n°6 : croire aux statistiques </h3>
+
+    <p>Vous avez obtenu les stats Opta des dix dernières années sur les confrontations entre deux clubs sur lesquels vous allez parier ? Ne vous y fiez pas.
+
+    <p>Astuce :
+    Pour optimiser le code, l'ensemble des propriétés de bordures peuvent être synthétisées de la façon es les statistiques des dernières semaines importent. Au delà, le contexte est trop différent : les états de forme n’étaient pas les mêmes ou – pire – les joueurs n’étaient pas les mêmes. Les statistiques doivent seulement vous aider pour parier, et non dicter votre pari. Utilisez votre flair et votre expérience !</p>
+
+    </section>
+
+    <p><a href="#titre"><i class="fas fa-angle-double-up"></i></a></p>
+
+{% endblock %}

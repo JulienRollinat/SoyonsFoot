@@ -1,0 +1,47 @@
+<?php
+
+namespace Soyons\FootBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Lesmatchs
+ *
+ * @ORM\Table(name="Lesmatchs")
+ * @ORM\Entity
+ */
+class Lesmatchs
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Idette", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idette;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Equipe 1", type="integer", nullable=false)
+     */
+    private $equipe1;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Nul", type="integer", nullable=false)
+     */
+    private $nul;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Equipe 2", type="integer", nullable=false)
+     */
+    private $equipe2;
+
+
+}
+

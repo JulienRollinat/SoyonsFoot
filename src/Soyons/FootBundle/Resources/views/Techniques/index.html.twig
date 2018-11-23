@@ -1,0 +1,177 @@
+{% extends "SoyonsFootBundle::layout.html.twig" %}
+
+{% block body %}
+
+<body>
+  <header id="titre">
+    <h1>Soyons <strong>Foot!</strong></h1>
+  </header>
+  <nav class="navprincipale">
+    <a href="{{ path('soyons_foot_homepage') }}"> Acceuil</a>
+    <a href="{{ path('soyons_foot_connexion') }}"> Notre Jeu en ligne</a>
+    <a href="{{ path('soyons_foot_debutantguide') }}"> Le guide du débutant</a>
+  </nav>
+
+  <section>
+
+    <h1> Les techniques de pari sportif les plus courantes ! </h1>
+
+    <p> <img src="{{asset('bundles/images/technical.png')}}"alt="techniques" class="technical">       </p>
+
+    <nav class="">
+      <a href="#martingale"> La martingale</a>
+      <a href="#surebet"> Le surebet</a>
+      <a href="#valuebet"> Le valuebet</a>
+    </nav>
+
+    <h3 id="martingale"> La martingale </h3>
+
+    <h4> Qu'est que c'est ?</h4>
+
+    <p> La technique de la martingale vient du monde du casino, elle a été ensuite adaptée pour les paris sportifs. Cette technique est un système de montante inversé, c’est-à-dire que votre mise augmente lorsque vous perdez. Surprenant n’est-ce pas ? Ne vous inquiétez pas, on va tout vous expliquer ! </p>
+
+    <p> Le but de la mart#suingale est d’avant tout de compenser vos pertes. C’est pour ça qu’il faut augmenter votre mise à chaque fois que vous venez de perdre un pari sportif. Vous l’aurez compris, plus vous perdez, plus votre mise augmente. Cependant, il ne faut pas que vous augmentiez votre mise n’importe comment. Il faut suivre un coefficient multiplicateur que vous obtenez avec cette formule : (total des pertes + bénéfice souhaité) ÷ (cote-1). </p>
+
+    <h4> La martingale : une solution miracle pour les paris sportifs ?</h4>
+
+    <p>Grâce à ce coefficient multiplicateur, même si vous enchaînez les mauvais paris sportifs, vous allez à terme, être gagnant dans vos paris sportifs.
+
+    Par exemple, vous misez 100€ sur un pari sportif avec une cote de 2,00, car vous souhaitez gagner 100€ de gains net, et là, pas de chance, vous avez perdu ! Vous cherchez alors un autre match pour essayer de regagner cette perte. Vous venez de repérer une belle cote de 1,80, c’est parfait ! Vous pouvez maintenant appliquer la formule du coefficient multiplicateur :
+
+    (total des pertes + bénéfice souhaité) ÷ (cote-1) = (100€ + 100€) ÷ (1,80 – 1) = 200€ ÷ 0,80 = 250€
+
+    Vous allez donc miser 250€ sur la cote de 1,80 que vous avez repérée et là, vous avez gagné ! Vous remportez par conséquent 250€ × 1,80 = 450€. Vous remboursez donc votre mise de 250€ ainsi que votre perte de 100€, et vous avez gagné en plus 100€ !
+
+    Pour votre prochain pari, vous pouvez donc remiser 100€ sereinement !  😎
+
+    Comme vous le voyez sur le papier, la martingale est une technique séduisante voire infaillible, cependant, nous allons vous expliquer pourquoi elle peut être très dangereuse..</p>
+
+    <h4>Les dangers de la martingale </h4>
+
+    <p>Dans l’exemple ci-dessus, nous avons pris l’exemple de 100€, car c’est le bonus le plus courant que les bookmakers proposent. Nous allons maintenant vous montrer pourquoi la martingale est dangereuse à travers un autre exemple. Avant ça, on va vous posez une question : </p>
+
+    <p> En tant que parieur sportif aguerri, avez-vous déjà connu une série de défaites ? </p>
+
+    <p> Votre réponse devrait être « oui » et si ce n’est pas le cas, désolé de vous l’annoncer, mais ça va vous arriver un jour ou l’autre ! </p>
+
+    <p> Dans l’exemple ci-dessous, vous allez partir avec une mise de base de 10€ cette fois-ci. Vo#suus souhaitez gagner 5€ et vous allez parier uniquement sur des cotes à 1,50, car elles ont généralement plus de chance de passer. On va vous illustrer ce qui arrive lorsque l’on combine une série de 5 défaites et le coefficient multiplicateur, même si la cote vous parait « safe ». </p>
+
+    <table class="tableau">
+      <tr>
+        <th> Nombre de paris </th>
+        <th> Mise	</th>
+        <th> Gain souhaité </th>
+        <th> Résultat	</th>
+        <th> Gain / Perte	</th>
+        <th> Solde </th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>10€</td>
+        <td>5€</td>
+        <td>Perdu</td>
+        <td>-10€</td>
+        <td>-10€</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>30€</td>
+        <td>5€</td>
+        <td>Perdu</td>
+        <td>-30€</td>
+        <td>-40€</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>90€</td>
+        <td>5€</td>
+        <td>Perdu</td>
+        <td>-90€</td>
+        <td>-90€</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>270€</td>
+        <td>5€</td>
+        <td>Perdu</td>
+        <td>-270€</td>
+        <td>-390€</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>790€</td>
+        <td>5€</td>
+        <td>Perdu</td>
+        <td>-790€</td>
+        <td>-1 150€</td>
+      </tr>
+    </table>
+
+    <p>Et voilà, avec seulement 5 paris sportifs perdus et en utilisant la technique de la martingale, vous avez perdu 1 150€… En théorie la martingale est infaillible, mais en réalité, vous n’avez pas un budget illimité. Appliquez cette technique à la lettre et vous pourrez vous retrouver en banqueroute assez rapidement… </p>
+
+    <p> Néanmoins, soyez serein, il est possible d’utiliser la martingale sans prendre de risque.</p>
+
+    <h4>Comment utiliser la martingale sans risque ?</h4>
+
+    <p>Tout d’abord, fixez-vous une limite ! Comme pour une bankroll normale, établissez-vous un budget pour la semaine ou pour le mois. Faites-vous un tableau de prévision « défaitiste » avec votre mise de départ, le bénéfice souhaité et les cotes visées. Comme ça, vous saurez où est votre limite de paris perdus et vous réduisez ainsi les risques de perdre beaucoup.</p>
+
+    <p>Ensuite, il faut que vous réduisiez le coefficient multiplicateur, car c’est à cause de ce dernier que vos mises augmentent de façon exponentielle. Pour le réduire, c’est simple, il suffit d’éviter de parier sur les petites cotes et de choisir des cotes plus grosses.
+
+    Par exemple, si vous misez toujours sur des cotes de 1,20, certes, la probabilité que vous gagniez est plus grande, mais si vous enchaînez une mauvaise série, le coefficient augmentera considérablement. Dans l’exemple précédent, nous avions une mise de base de 10€ et un gain souhaité de 5€. Avec une cote de 1,20, vous devrez miser 75€ dès le premier pari perdu, alors qu’avec une cote de 2,50 par exemple, vous devrez miser 10€. Vous pourrez donc augmenter votre limite de paris perdants. </p>
+
+    <h3 id="surebet"> Le surebet</h3>
+
+    <h4> Définition</h4>
+
+    <p>Le surebet, en anglais « pari sur »,  est une technique d’arbitrage permettant de remporter un gain quel que soit le résultat de l’événement sportif sur lequel vous avez parié. C’est la seule méthode permettant de gagner à tous les coups. Elle consiste à assurer un gain en jouant sur les différences de cotes de plusieurs bookmakers. Cette technique nécessite donc de posséder des comptes chez plusieurs bookmakers, car il est impossible qu’un bookmaker unique s’expose à un surebet à un instant donné.</p>
+
+    <h4>Calcul du surebet</h4>
+
+    <p>On est en présence d’un surebet lorsque :
+      <ul>
+
+    <li> 1/cote x + 1/cote n+ 1/cote y < 1 (pour les paris à trois solutions type 1N2)</li>
+    <li>1/cote x + 1/cote y < 1 (pour les paris à deux solutions type 12 au tennis)</li>
+      </ul>
+    </p>
+
+    <p>Si ce calcul pourra en effrayer certain il est en réalité d’une grande simplicité. Voici un exemple permettant d’illustrer cette opération :</p>
+
+    <p>Match PSG - OM : Vous trouvez au même moment les cotes suivantes chez différents bookmakers : (1 coté à 2 chez le book A, le N coté à 4 chez le book B et le 2 coté à 5 chez le book C)</p>
+
+    <p>On procède au calcul ci-dessus présenté : 1/2 + 1/4 + 1/5= 0.95. Le résultat étant inférieur à 1 puisque 0.95< 1, nous sommes donc en présence d’un surebet.</p>
+
+    <h4>Calcul des montants à miser </h4>
+
+    <p>Si vous savez désormais trouver par le calcul la présence d’un surebet, il vous reste à savoir combien miser sur chaque solution pour vous assurer d’un gain. Reprenons l’exemple précédent :</p>
+
+    <p>Ce surebet est de 5% (0.95). Pour être certain de toucher un gain similaire quel que soit l’issue de la rencontre vous devrez miser par exemple (fonction de votre capital) :
+    <ul>
+      <li>100/2 sur le 1 (Victoire du PSG) soit 50€</li>
+      <li>100/4 sur le N (match nul) soit 25€</li>
+      <li>100/5 sur le 2 (Victoire de l’OM) soit 20€</li>
+    </ul>
+
+    <p>Dans tous les cas de figure vous gagnerez 5€ sans avoir pris le moindre risque puisque vous avez misé en tout 95€ (50+25+20) et que votre pari gagnant vous rapportera 100€ (50x2 pour le 1, 25x4 pour le N ou 20x5 pour le 2).</p>
+
+    <p>A noter que vous pouvez également choisir de prendre un peu plus de risque sur telle ou telle solution en modifiant légèrement vos mises tout en restant dans le domaine du surebet.</p>
+
+    <h3 id="valuebet"> Le valuebet</h3>
+
+    <h4>Définition</h4>
+
+    <p>Un valuebet est un pari sur une issue sportive dont le bookmaker a sous-estimé la probabilité. Savoir le repérer permet de bénéficier d’une cote plus élevée et d’obtenir en conséquent de meilleurs gains grâce à ses qualités de pronostiqueur.</p>
+
+    <h4>3 cas possibles</h4>
+
+    <p> Chez tous les bookmakers, il est possible à un moment ou un autre d’effectuer un valuebet : Betclic, PMU, Unibet et d’autres établissent de temps en temps des cotes au-delà des probabilités réelles de l’issue de l’événement. C’est donc l’occasion de parier sur une cote anormalement élevée. Pour le repérer, il importe de distinguer au préalable 3 cas de cotes trop importantes :
+      <ul>
+        <li><strong>sur l’outsider :</strong> le site de paris pense que telle équipe va être totalement écrasée et décide de placer une cote très importante en pensant que sa victoire est de toute façon impossible. Cela plaira évidemment aux intrépides misant sur l’outsider. Toutefois, on ne parlera pas de valuebet ici, notamment parce que cette mise sera très rarement gagnante.</li>
+        <li><strong>sur le match nul :</strong> les bookmakers sous-estiment souvent sa probabilité alors que parier sur les matchs nul (lien) est globalement 1 fois sur 3 le choix judicieux pour le foot. On peut donc dire qu’il y a valuebet dans le cas où le nul est une issue quasi-certaine alors que sa cote est assez élevée.</li>
+        <li><strong>sur le favori, authentique cas de valuebet :</strong> une analyse technique (lien) poussée et objective montre que le favori gagnera à coup sûr, et pourtant tel bookmaker met sur lui une cote de 1,91 au lieu de 1,05.</li>
+      </ul>
+    </p>
+
+    <p><a href="#titre"><i class="fas fa-angle-double-up"></i></a></p>
+
+{% endblock %}

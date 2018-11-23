@@ -1,0 +1,39 @@
+{% extends "SoyonsFootBundle::layout.html.twig" %}
+
+{% block body %}
+  <body>
+    <header id="titre">
+      <h1>Soyons <strong>Foot!</strong></h1>
+    </header>
+    <nav class="navprincipale">
+      <a href="{{ path('soyons_foot_homepage') }}"> Acceuil</a>
+      <a href="{{ path('soyons_foot_debutantguide') }}"> Le guide du débutant</a>
+      <a href="{{ path('soyons_foot_techniques') }}"> Les différentes techniques</a>
+    </nav>
+
+    <section>
+      <h1> Connectez-vous à votre compte personnel </h1>
+    <form action="{{ path('soyons_foot_connexion') }}" method="post">
+
+      Votre email :
+      <br>
+      <input type="text" name="email">
+      <br>
+      <br>
+      Votre mot de passe :
+      <br>
+      <input type="password" name="motdepasse">
+      <br>
+      <br>
+      <input type="submit" value="Ok" class="submit">
+      <br>
+      <br>
+      <a href="{{ path('soyons_foot_login') }}"> <i> <h4 class="nocompte">Vous n'avez pas de mot de compte personnel</h4></i></a>
+
+    </form>
+
+    </section>
+
+    <p><a href="#titre"><i class="fas fa-angle-double-up"></i></a></p>
+
+{% endblock %}

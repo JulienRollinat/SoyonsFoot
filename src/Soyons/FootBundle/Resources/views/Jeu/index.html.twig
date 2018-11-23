@@ -1,0 +1,72 @@
+{% extends "SoyonsFootBundle::layout.html.twig" %}
+
+{% block body %}
+
+<body>
+  <header id="titre">
+    <h1>Soyons <strong>Foot!</strong></h1>
+  </header>
+  <nav class="navprincipale">
+    <a href="{{ path('soyons_foot_homepage') }}"> Acceuil</a>
+    <a href="{{ path('soyons_foot_connexion') }}"> Notre Jeu en ligne</a>
+    <a href="{{ path('soyons_foot_debutantguide') }}"> Le guide du débutant</a>
+  </nav>
+
+  <section>
+
+    {% if message is empty %}
+
+      <h1> Bienvenue sur notre jeu  de pronostic en ligne ! </h1>
+
+      <h3> Qu'est ce que c'est ?</h3>
+
+      <p><i>Soyons Sport</i>organise un grand concours de pronostic sur le football. </p>
+
+      <p>La participation à ce jeu concours est totalement gratuite.</p>
+
+      <h3> Comment on joue ?</h3>
+
+      <p>Le principe est très simple:<i>Soyons Sport</i> vous propose un match sur lequel vous pouvez pronostiquer. </p>
+      <p> Vous n'avez ensuite qu'à vous faire part de votre analyse !  </p>
+    {% else %}
+       <h1>{{ message }} !</h1>
+    {% endif %}
+
+      <h3> Le classement des meilleurs joueurs</h3>
+
+      <table class="tableau classement">
+        {% for user in classemento %}
+         <tr>
+          <td><strong>n° {{ loop.index }}</strong></td>
+          <td>{{ user.Firstname }} {{ user.Lastname }}</td>
+          <td>{{ user.Score }} pts</td>
+          </tr>
+        {% endfor %}
+        </table>
+
+        <br>
+        <br>
+      <button type="button" value ="Je veux jouer !" class="submit" id="gotogame"><h4>Je suis prêt <br>à jouer !</h4> </button>
+
+
+      <div id="game">
+      <font style="text-transform: uppercase;"> <h4> Le prono du jour</h4> </font>
+        <fieldset>
+          <label> Quel est ton pronostic pour le match {{ match.Equipe1 }} contre {{ match.Equipe2 }} ? </label>
+          <form action="{{ path('soyons_foot_jeu') }}" method="post">
+            <input type="hidden" name="id" value="{{ match.Idette }}">
+          <select name="prono">
+            <option value="1">{{ match.Equipe1 }} gagnant</option>
+            <option value="2">{{ match.Equipe2 }} gagnant</option>
+            <option value="0">Match nul</option>
+          </select>
+          <br>
+          <br>
+            <input type="submit" class="submit" value="Ok">
+        </form>
+      </fieldset>
+    </div>
+
+    <p><a href="#titre"><i class="fas fa-angle-double-up"></i></a></p>
+
+{% endblock %}

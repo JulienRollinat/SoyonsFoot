@@ -1,0 +1,33 @@
+{% extends "SoyonsFootBundle::layout.html.twig" %}
+
+{% block body %}
+
+  <body>
+    <header id="titre">
+      <h1>Soyons <strong>Foot!</strong></h1>
+    </header>
+    <nav class="navprincipale">
+      <a href="{{ path('soyons_foot_connexion') }}"> Notre Jeu en ligne</a>
+      <a href="{{ path('soyons_foot_debutantguide') }}"> Le guide du débutant</a>
+      <a href="{{ path('soyons_foot_techniques') }}"> Les différentes techniques</a>
+    </nav>
+    <section>
+
+      <h1> Bienvenue sur Soyons Foot ! </h1>
+      
+
+      <p>Soyons foot c'est avant tout chose... une équipe de passionnés ! </p>
+
+      <p>Adepte de la religion du ballon rond, l'équipe de <i>soyons foot</i> met à disposition du grand public ses analyses et pronostics sur les matchs à venir.</p>
+
+      <p> <img src="{{asset('bundles/images/footballreligion.jpeg')}}"alt="football">       </p>
+
+      <p>Parce que l'amour du football est universel, venez vibrer avec nous en ligne et partager vos avis et sur nos analyses.</p>
+
+      <p>Alors 1,2 ... chaussez vos crampons et à vos clics ! <a href="{{ path('soyons_foot_homepage') }}"></p>
+
+    </section>
+
+    <p><a href="#titre"><i class="fas fa-angle-double-up"></i></a></p>
+
+{% endblock %}

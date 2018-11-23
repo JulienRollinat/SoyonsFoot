@@ -1,0 +1,7 @@
+soyons_foot:
+    resource: "@SoyonsFootBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
