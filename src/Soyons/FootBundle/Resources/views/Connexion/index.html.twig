@@ -15,18 +15,16 @@
       <h1> Connectez-vous à votre compte personnel </h1>
     <form action="{{ path('soyons_foot_connexion') }}" method="post">
 
-      <p>Votre email : </p>
+      <label> Votre email : </label>
       
-      <p> <input type="text" name="email"> </p>
+      <input type="text" name="email">
       
-      <p> Votre mot de passe :</p>
+      <label> Votre mot de passe :</label>
       
-      <p> <input type="password" name="motdepasse"> </p>
-     
-      
-      <p><input type="submit" value="Ok" class="submit"> </p>
-      
-      
+      <input type="password" name="motdepasse">
+           
+      <input type="submit" value="Ok" class="submit"> 
+            
       <p> <a href="{{ path('soyons_foot_login') }}"> <i> <h4 class="nocompte">Vous n'avez pas de mot de compte personnel</h4></i></a> </p>
 
     </form>
